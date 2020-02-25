@@ -13,12 +13,13 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
-		.package(url: "https://github.com/swift-server/async-http-client.git", from: "1.0.0")
+		.package(url: "https://github.com/swift-server/async-http-client.git", from: "1.0.0"),
+		.package(url: "https://github.com/IBM-Swift/Swift-JWT.git", from: "3.6.1")
 	],
     targets: [
         .target(
             name: "Galileo",
-            dependencies: ["AsyncHTTPClient"]),
+            dependencies: ["AsyncHTTPClient", "SwiftJWT"]),
         .testTarget(
             name: "GalileoTests",
             dependencies: ["Galileo"]),
