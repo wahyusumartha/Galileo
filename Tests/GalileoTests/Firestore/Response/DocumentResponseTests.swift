@@ -36,10 +36,10 @@ final class DocumentResponseTests: XCTestCase {
 			"name": ["stringValue": AnyCodable("PT AGRO")],
 			"symbol": ["stringValue": AnyCodable("UNVR.JK")]
 		]
-		let document = DocumentResponse.Document(name: "name",
-												 fields: fields,
-												 createTime: "createTime",
-												 updateTime: "updateTime")
+		let document = Document(name: "name",
+								 fields: fields,
+								 createTime: "createTime",
+								 updateTime: "updateTime")
 		let expectedDocumentResponse = DocumentResponse(documents: [document])
 		let encodedJSON = try! JSONEncoder().encode(expectedDocumentResponse)
 		
